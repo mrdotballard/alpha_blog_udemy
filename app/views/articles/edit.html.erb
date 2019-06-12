@@ -1,5 +1,7 @@
+<h2> edit existing article <h2>
+
 <% if @article.errors.any? %>
-<p>The following errors prevented the article from being created</p>
+<p>The following errors prevented the article from being edited</p>
 <ul>
   <% @article.errors.full_messages.each do |msg| %>
     <li><%= msg %></li>
@@ -21,6 +23,7 @@
   <p>
     <%= f.submit %>
   </p>
+
 <% end %>
 
   <p>
