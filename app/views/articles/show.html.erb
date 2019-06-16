@@ -1,4 +1,5 @@
-<h1> showing selected artical<h1>
+<h1> Showing selected artical<h1>
+<div class="medium-size-font">
 <p>
     Title: <%= @article.title %>
 </p>
@@ -8,8 +9,9 @@
 </p>
 
   <p>
-    <%= link_to 'Edit this article', edit_article_path(@article) %>
+    <%= link_to 'Edit this article', edit_article_path(@article) %>  |  <%= link_to 'Back to Index', articles_path %>
 
   </p>
 
-      <%= link_to 'Back to Index', articles_path %>
+
+</div>
