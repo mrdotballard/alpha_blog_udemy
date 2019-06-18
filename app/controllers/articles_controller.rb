@@ -11,6 +11,7 @@ class ArticlesController < ApplicationController
     
   def create
     # render plain: params[:article].inspect
+    # debugger  - will pause serve and give CLI to access program, 'n' to next step, ctrl-d to finish running
     @article = Article.new(article_params)
     @article.user = User.first
     if @article.save
