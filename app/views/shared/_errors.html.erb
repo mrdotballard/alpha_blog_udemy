@@ -5,7 +5,13 @@
       <div class="panel-heading">
         <h2 class="panel-title">
           <%= pluralize(obj.errors.count, "error") %>
-            prohibited this article from being saved:
+          <%#   <%= "class:  #{obj.class}, 
+              inspect: #{obj.inspect}" %>
+          <% if obj.class == User %>
+            prohibited this user from being created 
+           <% else %>
+            prohibited this article from being posted 
+           <% end %>
         </h2>
         <div class="panel-body">
           <ul> 
