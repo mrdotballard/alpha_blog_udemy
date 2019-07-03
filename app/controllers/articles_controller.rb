@@ -16,7 +16,7 @@ class ArticlesController < ApplicationController
     # render plain: params[:article].inspect
     # debugger  - will pause serve and give CLI to access program, 'n' to next step, ctrl-d to finish running
     @article = Article.new(article_params)
-    @article.user = User.first
+    @article.user = current_user
     if @article.save
       flash[:success] = "Article was successfully created"
       redirect_to article_path(@article) #articles#show route
